@@ -20,7 +20,9 @@ public class LargestElementInTheArray {
 	}
 
 	private int largestElementInTheArray(int[] arr) {
-		int num=0;
+		int num=arr[0];// Start with first elementWhy: 
+		//This ensures correctness even if all elements are negative. 
+		//However, it assumes the array isn’t empty—see edge case handling below.
 		
 		for(int i: arr) {
 			if(num<i) {
